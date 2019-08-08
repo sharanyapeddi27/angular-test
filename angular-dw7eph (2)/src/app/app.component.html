@@ -1,0 +1,65 @@
+
+
+<div class="container">
+  <div class="row">
+    
+    <table class="fixed_headers">
+      <thead>
+        <tr>
+         
+          <th >Name
+          
+          </th>
+          <th >Phone</th>
+           <th >Email</th>
+            <th >Company</th>
+             <th >Date entry</th>
+              <th >org </th>
+               <th >address1</th>
+                <th >city</th>
+                 <th >zip</th>
+                  <th >geo</th>
+                   <th >pan</th>
+                    <th >Pin</th>
+                     <th >index</th>
+                      <th >status</th>
+                       <th >fee</th>
+                        <th >guide</th>
+                         <th >data exit</th>
+                          <th >data first</th>
+                           <th >data recent</th>
+                            <th >url</th>
+                 
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let game of games  | paginate: { itemsPerPage: 20, currentPage: p }; let i = index">
+         
+          <td>{{game.name}}</td>
+          <td>{{game.phone}}</td>
+          <td>{{game.email}}</td>
+          <td>{{game.company}}</td>
+          <td>{{game.date_entry}}</td>
+          <td>{{game.org_num}}</td>
+          <td>{{game.address_1}}</td>
+          <td>{{game.city}}</td>
+          <td>{{game.zip}}</td>
+          <td>{{game.geo}}</td>
+          <td>{{game.pan}}</td>
+          <td>{{game.pin}}</td>
+          <td>{{game.id}}</td>
+          <td>{{game.status}}</td>
+          <td>{{game.fee}}</td>
+          <td>{{game.guid}}</td>
+          <td>{{game.date_exit}}</td>
+          <td>{{game.date_first}}</td>
+           <td>{{game.date_recent}}</td>
+          <td>{{game.url}}</td>
+        </tr>
+      </tbody>
+     
+    </table>
+     <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div>
